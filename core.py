@@ -15,20 +15,7 @@ async def get_1_async():
         print(f"{res.first()=}")
 
 
-def create_tables():
-    sync_engine.echo = False
-    meta_obj.drop_all(sync_engine)
-    meta_obj.create_all(sync_engine)
-    sync_engine.echo = True
 
 
-def insert_data():
-    with sync_engine.connect() as conn:
-        stmt = insert(worker_table).values(
-            [
-                {"username": "AKM"},
-                {"username": "OKBM"}
-            ]
-        )
-        conn.execute(stmt)
-        conn.commit()
+
+

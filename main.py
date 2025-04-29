@@ -1,6 +1,6 @@
 import os
 import sys
-from core import create_tables, insert_data
+from orm import create_tables, insert_data
 
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 
