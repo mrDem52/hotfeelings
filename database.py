@@ -21,3 +21,4 @@ async_session_factory = async_sessionmaker(async_engine)
 
 class Base(DeclarativeBase):
     pass
+

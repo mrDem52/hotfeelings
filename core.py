@@ -40,5 +40,5 @@ class SyncCore:
         with sync_engine.connect() as conn:
             query = select(worker_table)
             result = conn.execute(query)
-            print()
-
+            workers = result.all()
+            print(f"{workers}")
